@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link, Route } from 'react-router-dom';
 
-import { getBooks, getBookDetail, addToCart } from '../actions';
+import { getBooks, addToCart } from '../actions';
 
 import { BookDetail } from '../components';
 
@@ -48,7 +48,6 @@ const mapStateToProps = (state, ownProps) => {console.log('mapStateToProps');
 
 const mapDispatchToProps = (dispatch) => {console.log('mapDispatchToProps');
   return bindActionCreators({
-    getBookDetail: getBookDetail,
     addToCart: addToCart,
   }, dispatch)
 };
