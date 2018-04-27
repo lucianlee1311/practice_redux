@@ -8,10 +8,11 @@ import AppBookDetail from './containers/indexBookDetail';
 import { BrowserRouter, HashRouter, Switch, Route } from 'react-router-dom';
 import reducerApp from './reducers';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducerApp, composeEnhancers(
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const store = createStore(reducerApp, composeEnhancers(
   
-));
+// ));
+const store = createStore(reducerApp);
 
 ReactDOM.render((
   <Provider store={store}>

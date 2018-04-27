@@ -1,14 +1,16 @@
-import data from '../data.json';
+const initialState = { 
+  books: []
+};
 
-export const booksReducer = (state = { books: data }, action) => {
+export const booksReducer = (store = initialState, action) => {
   switch (action.type) {
     case "GET_BOOKS":
       return {
-        books: [...state.books]
+        books: [...action.books]
       };
       break;
       
     default:
-      return state;
+      return store;
   }
 }

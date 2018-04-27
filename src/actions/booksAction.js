@@ -1,6 +1,6 @@
-export function getBooks() {console.log('+action getBooks+');
+export const getBooks = (books) => {
   return {
     type: "GET_BOOKS",
-    payload: ''
+    books
   }
 }
